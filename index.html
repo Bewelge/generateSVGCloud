@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head >
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>2D SVG Cloud Generator -<a href="https://github.com/bewelge/generateCloud">Github</a> - by <a href="https://github.com/bewelge/">Bewelge</a></title>
+
+	<link rel='stylesheet' href='lib/spectrum.css'>
+	<link rel="stylesheet" href="interface.css">
+
+</head>
+<body onload="start()">
+	
+	<div style='position:relative'>
+
+</div>
+<div id='loader'>
+	<div class='height25'></div>
+	<div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+	<div style='clear:both'></div>
+	<canvas width="200" height="100" id='loaderCanv'></canvas>
+	<div class='height25'></div>
+</div>
+	<div id='top'>
+		<h1>2D SVG Cloud Generator</h1>
+		<h5>Click a Cloud to add it to your Tileset</h5>
+	</div>
+	<div  id='main'>
+		<svg viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svg"></svg>
+		<p>Controls
+	</p>
+
+	</div>
+	<div id='description'> 
+		Hover over the Canvas or press the buttons to split the triangles into increasingly smaller triangles to reveal the picture underneath. </br>
+		</br>
+		Works by using each triangle to clip and draw the original image onto an offscreen canvas. Then the average color on that canvas is determined and drawn into the shape on the on-screen canvas. 
+	</div>
+	
+	<div class='centered' id='MouseCursor'></div>	
+	<div id='footer'>
+		<p class='link' onclick='showDescription()'>Description</p>
+		<p>Source on <a href='https://github.com/Bewelge'>GitHub</a></p>
+		<p class='c'>by Bewelge</p>
+
+	</div>
+	<div id='buttons'>
+		<button onclick='newClouds(9)'>New Batch</button>
+		<button onclick='createTileset()'>Get Tileset</button>
+	</div>
+	
+	<script type="text/javascript" src="lib/jquery-3.3.1.js"></script>
+	
+	
+
+	
+	<script type="text/javascript" src="js/main.js"></script>
+
+	<script type="text/javascript" src="paper-full.js"></script>
+	
+	
+</body>
+</html>
